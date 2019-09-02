@@ -1,0 +1,31 @@
+// install node
+FROM node:latest
+
+// copy all files into container
+COPY . .
+
+// install scripts in package file
+RUN npm install
+
+// command to execute
+CMD node src/index.js
+
+
+// command to execute to build the docker container
+> docker build -t companyname/project-name:tagnameOrVersionName
+or
+> docker build -t companyname/project-name:1
+
+image
+companyname/project-name:1
+
+run docker image
+
+> docker run -p 3000:3001 companyname/project-name:1
+
+-p is port / 3000 is its post and 3001 is port inside it that project will run at 
+
+
+
+https://www.youtube.com/watch?v=0N3n56KsC28
+
